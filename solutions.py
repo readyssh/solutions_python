@@ -60,7 +60,6 @@ if(x != 5):
   print("hello")
 else:
   print("bye")
-'''
 #3
 x=2
 y=0
@@ -69,8 +68,37 @@ if (x != 5 ) & (y >= 5):
 else:
   print("bye")
 
+name = input("Enter your name :")
+roll = int(input("Enter your roll number :"))
+marks = float(input("Enter your marks :"))
+comp = complex(input("Enter your complex :"))
 
+print("Your name is ", name)
+print("Your Roll no is ", roll)
+print("Your marks are ", marks)
+print("Your complex numbers are ", comp)
 
+'''
+
+# Function to convert integer to binary, hexadecimal, and octal
+def convert_integer(num):
+    # Convert to binary, hexadecimal, and octal
+    binary = bin(num)[2:]  # [2:] to remove the '0b' prefix
+    hexadecimal = hex(num)[2:]  # [2:] to remove the '0x' prefix
+    octal = oct(num)[2:]  # [2:] to remove the '0o' prefix
+
+    return binary, hexadecimal, octal
+
+# Input from the user
+num = int(input("Enter an integer: "))
+
+# Get the conversions
+binary, hexadecimal, octal = convert_integer(num)
+
+# Display the results
+print(f"Binary: {binary}")
+print(f"Hexadecimal: {hexadecimal}")
+print(f"Octal: {octal}")
 
 
 
