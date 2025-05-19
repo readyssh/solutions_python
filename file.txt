@@ -1,0 +1,199 @@
+# Install Python (skip, manual step)
+
+# First program
+print("Hello World")
+
+# Data types
+a = 10              # int
+b = 3.14            # float
+c = "Hello"         # str
+d = True            # bool
+lst = [1, 2, 3]     # list
+dct = {'x': 1}      # dict
+tpl = (1, 2, 3)     # tuple
+st = {1, 2, 3}      # set
+
+# Script file: save code in file.py and run: python file.py
+
+# Input
+name = input("Enter name: ")
+
+# Conditionals
+if a > 5:
+    print("Greater")
+elif a == 5:
+    print("Equal")
+else:
+    print("Smaller")
+
+# Loops
+for i in range(5):
+    print(i)
+
+i = 0
+while i < 5:
+    print(i)
+    i += 1
+
+# Function
+def add(x, y):
+    return x + y
+
+# Object and indentation
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+# Import module
+import math
+print(math.sqrt(16))
+
+
+
+
+# Dictionary
+d = {'a': 1}
+d['b'] = 2
+del d['a']
+
+# List
+lst = [1, 2, 3]
+lst.append(4)
+lst.remove(2)
+
+# List operations
+print(lst[0])       # indexing
+print(lst[1:3])     # slicing
+for item in lst:
+    print(item)
+
+# Loop with dict
+for k, v in d.items():
+    print(k, v)
+
+
+
+# Tuple
+t = (1, 2, 3)
+print(t[0])
+
+# Tuple immutability: can't change t[0]
+
+# Multiple assignment
+x, y = 1, 2
+
+# String formatting
+name = "Alice"
+print(f"Hello {name}")
+print("Hello {}".format(name))
+
+# Map/join
+nums = ['1', '2', '3']
+print(','.join(nums))
+
+# Split string
+s = "a,b,c"
+print(s.split(','))
+
+
+# Built-ins
+print(type(5))
+print(str(5))
+print(dir([]))
+
+# List methods
+lst.append(5)
+lst.insert(1, 10)
+lst.extend([6, 7])
+lst.remove(1)
+lst.sort()
+lst.reverse()
+
+# String methods
+s = "hello"
+print(s.upper())
+
+# Socket (basic)
+import socket
+s = socket.socket()
+
+
+import re
+
+# Match/search/findall
+re.search(r"\d+", "abc123")
+re.match(r"abc", "abcdef")
+re.findall(r"\w+", "Hello 123")
+
+# Patterns
+# .  any char, \w word char, \d digit, \s whitespace, \S non-whitespace
+
+
+# Class
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+# os module
+import os
+print(os.getcwd())
+print(os.listdir())
+print(os.path.exists("file.txt"))
+print(os.path.abspath("file.txt"))
+os.mkdir("new_dir")
+os.rmdir("new_dir")
+print(os.access("file.txt", os.R_OK))
+
+
+# File handling
+f = open("test.txt", "r")
+content = f.read()
+f.close()
+
+with open("test.txt", "w") as f:
+    f.write("Hello\nWorld")
+
+# Count lines and words
+with open("test.txt") as f:
+    lines = f.readlines()
+    print(len(lines))
+    print(sum(len(line.split()) for line in lines))
+
+# Web request
+import requests
+resp = requests.get("https://example.com")
+print(resp.text)
+
+
+# Server
+import socket
+s = socket.socket()
+s.bind(('localhost', 1234))
+s.listen(1)
+conn, addr = s.accept()
+data = conn.recv(1024)
+conn.send(b'Hello')
+
+# Client
+c = socket.socket()
+c.connect(('localhost', 1234))
+c.send(b'Hi')
+print(c.recv(1024))
+
+
+# Simulate exploit (example only)
+s = socket.socket()
+s.connect(('target_ip', 1234))
+payload = b"A" * 1000
+s.send(payload)
+
+
+# Debugging
+print("Debug value:", x)
+
+# Automation (example)
+import os
+for f in os.listdir():
+    if f.endswith(".txt"):
+        print(f"Processing {f}")
+
