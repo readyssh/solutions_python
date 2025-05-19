@@ -82,24 +82,23 @@ print("Your complex numbers are ", comp)
 
 # Function to convert integer to binary, hexadecimal, and octal
 def convert_integer(num):
-    # Convert to binary, hexadecimal, and octal
     binary = bin(num)[2:]  # [2:] to remove the '0b' prefix
     hexadecimal = hex(num)[2:]  # [2:] to remove the '0x' prefix
     octal = oct(num)[2:]  # [2:] to remove the '0o' prefix
 
     return binary, hexadecimal, octal
 
-# Input from the user
 num = int(input("Enter an integer: "))
 
-# Get the conversions
 binary, hexadecimal, octal = convert_integer(num)
 
-# Display the results
 print(f"Binary: {binary}")
 print(f"Hexadecimal: {hexadecimal}")
 print(f"Octal: {octal}")
 
+print(type(binary))
+print(type(hexadecimal))
+print(type(octal))
 
 
 
