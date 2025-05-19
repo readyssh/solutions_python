@@ -1,0 +1,145 @@
+# 1. Find the number of unique elements in a list and print the list
+lst = [1, 2, 2, 3, 4, 4, 5]
+unique_lst = list(set(lst))
+print("Unique elements:", unique_lst)
+print("Count:", len(unique_lst))
+
+# 2. Reverse the list elements
+lst = [1, 2, 3, 4, 5]
+lst.reverse()
+print("Reversed list:", lst)
+
+# 3. Find sum of numbers in list
+lst = [1, 2, 3, 4, 5]
+print("Sum:", sum(lst))
+
+# 4. Find the largest and smallest number in the list
+lst = [1, 2, 3, 4, 5]
+print("Max:", max(lst))
+print("Min:", min(lst))
+
+# 5. Print all even numbers in a list
+lst = [1, 2, 3, 4, 5, 6]
+print("Even numbers:", [x for x in lst if x % 2 == 0])
+
+# 6. Print all odd numbers in a list
+print("Odd numbers:", [x for x in lst if x % 2 != 0])
+
+# 7. Remove common elements from two lists
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
+result = list(set(a) ^ set(b))
+print("After removing common elements:", result)
+
+# 8. Print multiplication table of a given number
+num = 5
+for i in range(1, 11):
+    print(f"{num} x {i} = {num*i}")
+
+# 9. Count the total number of digits in a number
+n = 123456
+print("Number of digits:", len(str(n)))
+
+# 10. Use else block to display a message “Done” after successful execution of for loop
+for i in range(5):
+    print(i)
+else:
+    print("Done")
+
+# 11. Display all prime numbers within a range
+start, end = 10, 50
+for num in range(start, end + 1):
+    if num > 1:
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                break
+        else:
+            print(num, end=' ')
+print()
+
+# 12. Display Fibonacci series up to 10 terms
+a, b = 0, 1
+for _ in range(10):
+    print(a, end=' ')
+    a, b = b, a + b
+print()
+
+# 13. Reverse a given integer number
+num = 12345
+print("Reversed number:", int(str(num)[::-1]))
+
+# 14. Find numbers divisible by 7 and multiple of 5 between 100 and 1000
+print("Divisible by 7 and multiple of 5:")
+for i in range(100, 1001):
+    if i % 7 == 0 and i % 5 == 0:
+        print(i, end=' ')
+print()
+
+# 15. Convert temperatures to and from Celsius, Fahrenheit
+c = 37
+f = (c * 9/5) + 32
+print(f"Celsius to Fahrenheit: {f}")
+f = 98.6
+c = (f - 32) * 5/9
+print(f"Fahrenheit to Celsius: {c}")
+
+# 16. Print numbers from 0 to 6 except 3 and 6 using continue
+for i in range(7):
+    if i == 3 or i == 6:
+        continue
+    print(i)
+
+# 17. Display "Hello" if number is multiple of five, else "Bye"
+n = 25
+print("Hello" if n % 5 == 0 else "Bye")
+
+# 18. Check whether a year is leap year or not
+year = 2024
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print("Leap year")
+else:
+    print("Not a leap year")
+
+# 19. Reverse a string
+s = "hello"
+print("Reversed string:", s[::-1])
+
+# 20. Check if string is palindrome
+s = "madam"
+print("Palindrome" if s == s[::-1] else "Not a palindrome")
+
+# 21. Menu-driven hotel program
+def hotel():
+    menu = {
+        1: "Pizza - $10",
+        2: "Burger - $5",
+        3: "Pasta - $8",
+        4: "Exit"
+    }
+    while True:
+        print("\nMenu:")
+        for k, v in menu.items():
+            print(f"{k}. {v}")
+        choice = int(input("Enter your choice: "))
+        if choice == 4:
+            print("Thank you!")
+            break
+        elif choice in menu:
+            print(f"You ordered {menu[choice]}")
+        else:
+            print("Invalid choice")
+# Uncomment below to run
+# hotel()
+
+# 22. Common star patterns
+# Pattern 1: Right triangle
+for i in range(1, 6):
+    print("*" * i)
+
+# Pattern 2: Inverted triangle
+for i in range(5, 0, -1):
+    print("*" * i)
+
+# Pattern 3: Pyramid
+for i in range(1, 6):
+    print(" " * (5 - i) + "*" * (2 * i - 1))
